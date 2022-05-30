@@ -1,0 +1,382 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/21d5bbc48c.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: "Raleway";
+    }
+    
+    .conteiner-total {
+        width: 73%;
+        margin: auto;
+        border-left: 1px solid rgba(175, 175, 175, 0.6);
+        border-right: 1px solid rgba(175, 175, 175, 0.6);
+    }
+    
+    .conteiner-menu {
+        margin: 0;
+        width: 20%;
+        height: 100vh;
+        background-image: linear-gradient(to bottom right, rgb(235, 235, 235), white);
+        padding: 30px 15px;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+    }
+    
+    .conteiner-menu h3,
+    .conteiner-menu h4 {
+        font-size: 25px;
+        text-decoration: none;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+    
+    .conteiner-menu h6 {
+        font-size: 17px;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+    
+    .conteiner-form {
+        width: 100%;
+        margin-top: 50px;
+    }
+    
+    .conteiner-form .lbl p {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+    
+    .conteiner-form input {
+        padding: 10px;
+        margin-bottom: 18px;
+        width: 100%;
+        border: 1px solid grey;
+    }
+    
+    .conteiner-form .btn {
+        background-color: #4CAF50;
+        font-size: 15px;
+        color: white;
+        text-align: center;
+    }
+    
+    .conteiner-form .btn:hover {
+        background-color: dcdcdc;
+        color: black;
+    }
+    
+    .link-nav a {
+        text-decoration: none;
+        font-size: 15px;
+        display: block;
+        color: black;
+        width: 100%;
+        padding: 15px 0px;
+        margin-top: 15px;
+    }
+    
+    .link-nav a:hover {
+        background-color: #dcdcdc;
+    }
+    
+    .link-nav a:nth-child(3) {
+        margin-bottom: 0px;
+    }
+    
+    .conteiner-main {
+        width: 73%;
+        margin-left: 27%;
+        padding: 15px 15px;
+    }
+    
+    .conteiner-apart h1 {
+        color: #4CAF50;
+        font-weight: normal;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .conteiner-apart .card-central {
+        background-image: url(./imagens/livingroom.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .card-central p {
+        background-color: black;
+        width: 120px;
+        height: 40px;
+        padding: 10px;
+        color: white;
+        margin-bottom: 25px;
+    }
+    
+    .card-flex {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .card-flex img {
+        width: 23.5%;
+    }
+    
+    .text-space {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .text-space h5 {
+        margin-bottom: 40px;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+    
+    .conteiner-flex-col {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 150px;
+        margin-top: 10px;
+    }
+    
+    .conteiner-flex-col p {
+        font-size: 18px;
+    }
+    
+    .conteiner-flex-col p {
+        height: 33%;
+        width: 50%
+    }
+    
+    .Amenities {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .Amenities h5 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+    
+    .conteiner-flex-col-a {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 150px;
+        margin-top: 10px;
+    }
+    
+    .conteiner-flex-col-a p {
+        width: 50%;
+        height: 33%;
+        font-size: 18px;
+    }
+    
+    .conteiner-extra-info,
+    .conteiner-rules {
+        width: 100%;
+        margin-top: 20px;
+        line-height: 2;
+    }
+    
+    .conteiner-extra-info h5,
+    .conteiner-rules h5 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+    
+    .conteiner-rules input {
+        width: 30%;
+        margin-top: 20px;
+        padding: 10px;
+        margin-bottom: 18px;
+        border: 1px solid grey;
+    }
+    
+    .conteiner-rules .btn {
+        background-color: #4CAF50;
+        font-size: 15px;
+        color: white;
+        text-align: center;
+    }
+    
+    .conteiner-rules .btn:hover {
+        background-color: dcdcdc;
+        color: black;
+    }
+    
+    .conteiner-contact {
+        margin-top: 40px;
+    }
+    
+    .conteiner-contact h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .conteiner-contact input,
+    .conteiner-contact textarea {
+        width: 100%;
+        padding-top: 10px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
+    
+    .conteiner-contact .btn {
+        background-color: #4CAF50;
+        font-size: 15px;
+        color: white;
+        text-align: center;
+        width: 30%;
+        box-shadow: none;
+        border: none;
+    }
+    
+    .conteiner-contact .btn:hover {
+        background-color: dcdcdc;
+        color: black;
+    }
+</style>
+
+<body>
+
+    <div class="conteiner-total">
+        <nav class="conteiner-menu">
+            <h3>Rental</h3>
+            <h4>from $99</h4>
+            <h6>per night</h6>
+
+            <div class="conteiner-form">
+                <label class="lbl" for="check">
+                    <p><i class="fa fa-calendar-check-o"></i>
+                    Check In</p>
+                </label>
+                <input type="date" id="check" name="check" placeholder="DD MM YY">
+                <label class="lbl" for="checkout">
+                <p><i class="fa fa-calendar-o"></i>
+                    Check Out</p>
+                
+                </label>
+                <input type="date" id="checkout" name="checkout" placeholder="DD MM YY">
+                <label class="lbl" for="adutos">
+                <p><i class="fa fa-male"></i>
+                    Adults</p>
+                
+                 </label>
+                <input type="number" id="adutos" name="adultos">
+                <label class="lbl" for="kids">
+                <p><i class="fa fa-child"></i>
+                    Kids</p>
+                 </label>
+                <input type="number" id="kids" name="kids">
+                <input class="btn" type="button" value=" Search availability">
+            </div>
+
+            <div class="link-nav">
+                <a href="#"> <i class="fa fa-building"></i> Apartament</a>
+                <a href="#"><i class="fa fa-rss"></i> Subscribe</a>
+                <a href="#"><i class="fa fa-envelope"></i> Contact</a>
+            </div>
+        </nav>
+
+        <div class="conteiner-main">
+
+            <section class="conteiner-apart">
+                <h1>The Apartament</h1>
+                <div class="card-central">
+                    <p>Living Room</p>
+                </div>
+                <div class="card-flex">
+                    <img class="card-img1" src="imagens/livingroom.jpg" alt="">
+                    <img class="card-img2" src="imagens/diningroom.jpg" alt="">
+                    <img class="card-img3" src="imagens/bedroom.jpg" alt="">
+                    <img class="card-img4" src="imagens/livingroom2.jpg" alt="">
+                </div>
+            </section>
+
+            <section class="text-space">
+                <h5>The space</h5>
+                <div class="conteiner-flex-col">
+                    <p class="ord1"> <i class="fa fa-male" aria-hidden="true"></i> Max people: 4</p>
+                    <p class="ord1"><i class="fa fa-bath" aria-hidden="true"></i> Bathrooms: 2</p>
+                    <p class="ord1"><i class="fa fa-bed" aria-hidden="true"></i> Bedrooms: 1</p>
+                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> Check In: After 3PM</p>
+                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> Check Out: 12PM</p>
+                </div>
+                <hr>
+            </section>
+
+            <section class="Amenities">
+                <h5>Amenities</h5>
+                <div class="conteiner-flex-col-a">
+                    <p class=> <i class="fa fa-shower" aria-hidden="true"></i> Shower</p>
+                    <p class=><i class="fa-solid fa-wifi"></i> WIFI</p>
+                    <p class=><i class="fas fa-tv"></i> TV</p>
+                    <p><i class="fa fa-cutlery" aria-hidden="true"></i> Kitchen</p>
+                    <p><i class="fa fa-thermometer-full" aria-hidden="true"></i> Heating</p>
+                    <p><i class="fa fa-wheelchair" aria-hidden="true"></i> Accessible</p>
+                </div>
+                <hr>
+            </section>
+
+            <section class="conteiner-extra-info">
+                <h5>Extra Info</h5>
+                <p>Our apartment is really clean and we like to keep it that way. Enjoy the lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+                <p>We accept <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+                </p>
+            </section>
+
+            <section class="conteiner-rules">
+                <h5>Rules</h5>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+                <p>Subscribe to receive updates on available dates and special offers.
+                </p>
+                <input type="button" value="Subscribe" class="btn">
+            </section>
+
+            <section class="conteiner-contact">
+                <h2>Contact</h2>
+                <p><i class="fa fa-map-marker"></i> Chicago, US</p><br>
+                <p><i class="fa fa-phone"></i> Phone: +00 151515</p><br>
+                <p><i class="fa fa-envelope"> </i> Email: mail@mail.com</p><br>
+                <p>Questions? Go ahead, ask them:</p>
+                <input type="text" placeholder="Name">
+                <input type="Email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <input type="button" value="Send a message" class="btn">
+            </section>
+
+
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
